@@ -99,9 +99,20 @@ input = [120847,
 66362,
 126340,
 143660]
-output = []
-for number in input:
-    fixedNumber = (floor(number/3))-2
-    output.append(fixedNumber)
+output1 = []
+final = 0
+def DayOne():
+    for number in input:
+        fixedNumber = (floor(number/3))-2
+        output1.append(fixedNumber)
 
-print(output)
+def DayTwo(inputData):
+    final = 0
+    for number in inputData:
+        while number > 0:
+            fixedNumber = (floor(number/3))-2
+            final += fixedNumber
+            number = fixedNumber
+    print(final)
+
+DayTwo(input)
