@@ -103,3 +103,5 @@ output = []
 for number in input:
     fixedNumber = (floor(number/3))-2
     output.append(fixedNumber)
+
+print(output)
