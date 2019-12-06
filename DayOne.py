@@ -109,10 +109,16 @@ def DayOne():
 def DayTwo(inputData):
     final = 0
     for number in inputData:
-        while number > 0:
-            fixedNumber = (floor(number/3))-2
-            final += fixedNumber
-            number = fixedNumber
+        fuel = number
+        while fuel > 0:
+            print(fuel)
+            fixedNumber = (floor(fuel/3))-2
+            if fixedNumber > 0:
+                final += fixedNumber
+                fuel = fixedNumber
+            else:
+                fuel = fixedNumber
+            print(fuel)
     print(final)
 
 DayTwo(input)
